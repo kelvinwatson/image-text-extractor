@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Image Text Extractor</string>
+    <string name="select_photos">Select photos</string>
+</resources>
