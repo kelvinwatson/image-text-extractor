@@ -1,9 +1,13 @@
-package com.determinasian.imagetextextractor
+package com.determinasian.imagetextextractor.viewmodel
 
 import android.net.Uri
 import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultCallback
 import androidx.lifecycle.ViewModel
+import com.determinasian.imagetextextractor.photopicker.PickMediaLauncher
+import com.determinasian.imagetextextractor.ui.state.UiState
+import com.determinasian.imagetextextractor.processor.ImageProcessor
+import com.determinasian.imagetextextractor.processor.UriProcessor
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -40,7 +44,7 @@ class UriProcessingViewModel : ViewModel() {
                     _uiState.value = UiState.Error(
                         exception = e,
 
-                    )
+                        )
 
                 }
             } ?: run {

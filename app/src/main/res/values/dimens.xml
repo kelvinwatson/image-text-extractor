@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <dimen name="min_touch_target">48dp</dimen>
+
+   <!-- Margin -->
+   <dimen name="card_margin">16dp</dimen>
+   <dimen name="grid_margin_0">4dp</dimen>
+   <dimen name="grid_margin_1">8dp</dimen>
+   <dimen name="grid_margin_2">16dp</dimen>
+   <dimen name="grid_margin_3">24dp</dimen>
+   <dimen name="grid_margin_4">32dp</dimen>
+
+   <!-- Padding -->
+   <dimen name="card_content_padding">16dp</dimen>
+   <dimen name="page_padding">16dp</dimen>
+</resources>

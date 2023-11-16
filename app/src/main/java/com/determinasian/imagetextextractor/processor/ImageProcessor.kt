@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor
+package com.determinasian.imagetextextractor.processor
 
 import androidx.arch.core.util.Function
 import com.google.android.gms.tasks.Task

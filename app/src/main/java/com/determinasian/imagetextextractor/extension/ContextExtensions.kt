@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor
+package com.determinasian.imagetextextractor.extension
 
 import android.content.Context
 import android.content.ContextWrapper

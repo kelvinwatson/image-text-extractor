@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor
+package com.determinasian.imagetextextractor.ui.state
 
 import android.net.Uri
 import com.google.mlkit.vision.text.Text

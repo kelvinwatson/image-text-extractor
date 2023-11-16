@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Image Text Extractor</string>
+    <string name="error_processing_image">Error processing image</string>
+    <string name="no_text_extracted">No text extracted</string>
+    <string name="not_started_explanation">Select or take a photo to begin</string>
+    <string name="processing">Processing</string>
     <string name="select_photos">Select photos</string>
+    <string name="select_photos_explanation">Select photos from your device</string>
+    <string name="take_photo">Take a photo</string>
+    <string name="take_photo_explanation">Take a photo with your camera</string>
+    <string name="text_extraction_complete">Text extraction complete</string>
 </resources>

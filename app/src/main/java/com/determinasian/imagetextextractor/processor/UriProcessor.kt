@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor
+package com.determinasian.imagetextextractor.processor
 
 import android.content.Context
 import android.net.Uri
