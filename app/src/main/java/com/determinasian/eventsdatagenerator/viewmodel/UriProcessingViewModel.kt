@@ -1,15 +1,12 @@
-package com.determinasian.imagetextextractor.viewmodel
+package com.determinasian.eventsdatagenerator.viewmodel
 
 import android.net.Uri
 import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultCallback
 import androidx.lifecycle.ViewModel
-import com.determinasian.imagetextextractor.photopicker.PickMediaLauncher
-import com.determinasian.imagetextextractor.ui.state.UiState
-import com.determinasian.imagetextextractor.processor.ImageProcessor
+import com.determinasian.eventsdatagenerator.photopicker.PickMediaLauncher
+import com.determinasian.eventsdatagenerator.ui.state.UiState
 import com.determinasian.imagetextextractor.processor.UriProcessor
-import com.google.mlkit.vision.text.TextRecognition
-import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -29,12 +26,11 @@ class UriProcessingViewModel : ViewModel() {
 
             // TODO: Dependency injection
             UriProcessor(
-                componentActivity,
+                componentActivity
                 // TODO: Dependency injection
-                ImageProcessor(TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)) {
-                    _uiState.value = UiState.Processing
-                }
-            ).apply(uris)?.let { task ->
+            ) {
+                _uiState.value = UiState.Processing
+            }.apply(uris)?.let { task ->
                 task.addOnSuccessListener { mlKitText ->
                     _uiState.value = UiState.Complete(
                         text = mlKitText,

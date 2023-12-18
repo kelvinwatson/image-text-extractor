@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor.ui.composables
+package com.determinasian.eventsdatagenerator.ui.composables
 
 import android.net.Uri
 import androidx.activity.result.ActivityResultCallback
@@ -34,11 +34,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
-import com.determinasian.imagetextextractor.R
-import com.determinasian.imagetextextractor.extension.findComponentActivity
-import com.determinasian.imagetextextractor.photopicker.PickMediaLauncher
-import com.determinasian.imagetextextractor.ui.state.UiState
-import com.determinasian.imagetextextractor.ui.theme.ImageTextExtractorTheme
+import com.determinasian.eventsdatagenerator.extension.findComponentActivity
+import com.determinasian.eventsdatagenerator.photopicker.PickMediaLauncher
+import com.determinasian.eventsdatagenerator.ui.state.UiState
+import com.determinasian.eventsdatagenerator.ui.theme.ImageTextExtractorTheme
+import com.determinasian.eventsdatagenerator.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

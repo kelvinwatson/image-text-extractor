@@ -6,11 +6,10 @@ import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.Text
 import com.google.mlkit.vision.text.TextRecognizer
 
-class ImageProcessor(
+internal class ImageProcessor(
     private val textRecognizer: TextRecognizer,
     private val onProcessing: () -> Unit
-) :
-    Function<InputImage, Task<Text?>> {
+) : Function<InputImage, Task<Text?>> {
 
     //TODO Return a wrapper that includes a status, such as an error
     override fun apply(input: InputImage?): Task<Text?>? {

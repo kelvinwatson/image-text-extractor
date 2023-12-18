@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor.extension
+package com.determinasian.eventsdatagenerator.extension
 
 import android.content.Context
 import android.content.ContextWrapper

@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ImageTextExtractor"
+rootProject.name = "eventsDataGenerator"
 include(":app")
- 
+include(":imageTextExtractor")

@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor.ui.view
+package com.determinasian.eventsdatagenerator.ui.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,9 +10,9 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.ViewModelProvider
-import com.determinasian.imagetextextractor.ui.composables.Home
-import com.determinasian.imagetextextractor.ui.theme.ImageTextExtractorTheme
-import com.determinasian.imagetextextractor.viewmodel.UriProcessingViewModel
+import com.determinasian.eventsdatagenerator.ui.composables.Home
+import com.determinasian.eventsdatagenerator.ui.theme.ImageTextExtractorTheme
+import com.determinasian.eventsdatagenerator.viewmodel.UriProcessingViewModel
 
 
 class MainActivity : ComponentActivity() {

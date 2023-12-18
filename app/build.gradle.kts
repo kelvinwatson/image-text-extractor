@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.determinasian.imagetextextractor"
+    namespace = "com.determinasian.eventsdatagenerator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.determinasian.imagetextextractor"
+        applicationId = "com.determinasian.eventsdatagenerator"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -63,6 +63,8 @@ dependencies {
 
     //Coil
     implementation("io.coil-kt:coil-compose:2.5.0")
+
+    implementation(project(":imageTextExtractor")) //UriProcessor,ImageProcessor
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")

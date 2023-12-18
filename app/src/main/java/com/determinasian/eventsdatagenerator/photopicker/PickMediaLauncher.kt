@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor.photopicker
+package com.determinasian.eventsdatagenerator.photopicker
 
 import android.net.Uri
 import androidx.activity.ComponentActivity

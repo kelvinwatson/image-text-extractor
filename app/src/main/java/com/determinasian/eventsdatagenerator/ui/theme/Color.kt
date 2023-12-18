@@ -1,4 +1,4 @@
-package com.determinasian.imagetextextractor.ui.theme
+package com.determinasian.eventsdatagenerator.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
