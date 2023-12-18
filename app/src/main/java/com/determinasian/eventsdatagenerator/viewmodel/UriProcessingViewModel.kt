@@ -26,11 +26,12 @@ class UriProcessingViewModel : ViewModel() {
 
             // TODO: Dependency injection
             UriProcessor(
-                componentActivity
+                componentActivity,
                 // TODO: Dependency injection
-            ) {
-                _uiState.value = UiState.Processing
-            }.apply(uris)?.let { task ->
+                onProcessingImage = {
+                    _uiState.value = UiState.Processing
+                }
+            ).apply(uris)?.let { task ->
                 task.addOnSuccessListener { mlKitText ->
                     _uiState.value = UiState.Complete(
                         text = mlKitText,
