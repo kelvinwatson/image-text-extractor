@@ -9,15 +9,16 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.ViewModelProvider
 import com.determinasian.eventsdatagenerator.ui.composables.Home
 import com.determinasian.eventsdatagenerator.ui.theme.ImageTextExtractorTheme
 import com.determinasian.eventsdatagenerator.viewmodel.UriProcessingViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val uriProcessingViewModel: UriProcessingViewModel by viewModels { ViewModelProvider.NewInstanceFactory.instance }
+    private val uriProcessingViewModel: UriProcessingViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
 }
 
 android {
@@ -32,6 +34,11 @@ android {
 }
 
 dependencies {
+    /**
+     * Hilt
+     */
+    implementation("com.google.dagger:hilt-android:2.49")
+    kapt("com.google.dagger:hilt-android-compiler:2.49")
 
     implementation("androidx.core:core-ktx:1.12.0") //Function
     implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.0") //Text

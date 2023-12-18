@@ -14,7 +14,9 @@ import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
 @HiltViewModel
-class UriProcessingViewModel @Inject constructor(): ViewModel() {
+class UriProcessingViewModel @Inject constructor(
+    private val uriProcessor: UriProcessor
+) : ViewModel() {
     val uiState: StateFlow<UiState>
         get() = _uiState.asStateFlow()
     private val _uiState = MutableStateFlow<UiState>(UiState.NotStarted)
@@ -24,17 +26,17 @@ class UriProcessingViewModel @Inject constructor(): ViewModel() {
     // https://developer.android.com/training/data-storage/shared/photopicker
     fun initPhotoPicker(componentActivity: ComponentActivity) {
         PickMediaLauncher.getInstance(componentActivity, ActivityResultCallback<List<Uri>> { uris ->
+
             // Callback is invoked after the user selects a media item or closes the
             // photo picker.
 
-            // TODO: Dependency injection
-            UriProcessor(
+            uriProcessor(
                 componentActivity.applicationContext,
-                // TODO: Dependency injection
+                uris,
                 onProcessingImage = {
                     _uiState.value = UiState.Processing
                 }
-            ).apply(uris)?.let { task ->
+            )?.let { task ->
                 task.addOnSuccessListener { mlKitText ->
                     _uiState.value = UiState.Complete(
                         text = mlKitText,
