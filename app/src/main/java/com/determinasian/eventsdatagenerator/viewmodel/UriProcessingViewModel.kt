@@ -7,11 +7,14 @@ import androidx.lifecycle.ViewModel
 import com.determinasian.eventsdatagenerator.photopicker.PickMediaLauncher
 import com.determinasian.eventsdatagenerator.ui.state.UiState
 import com.determinasian.imagetextextractor.processor.UriProcessor
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import javax.inject.Inject
 
-class UriProcessingViewModel : ViewModel() {
+@HiltViewModel
+class UriProcessingViewModel @Inject constructor(): ViewModel() {
     val uiState: StateFlow<UiState>
         get() = _uiState.asStateFlow()
     private val _uiState = MutableStateFlow<UiState>(UiState.NotStarted)
@@ -26,7 +29,7 @@ class UriProcessingViewModel : ViewModel() {
 
             // TODO: Dependency injection
             UriProcessor(
-                componentActivity,
+                componentActivity.applicationContext,
                 // TODO: Dependency injection
                 onProcessingImage = {
                     _uiState.value = UiState.Processing
